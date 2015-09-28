@@ -18,6 +18,12 @@ public class PhotoManager {
 
     static String mainDirPath; //Main directory path
     static String[] deviceDirPath = new String[Constants.MAX_DEVICES]; //Each device directory path
+    
+//    static DeviceManager deviceManager = new DeviceManager();
+//    public static void main(String [ ] args) throws Exception {
+//        String[] availableDevices = deviceManager.getAvailableDevices();
+//    }
+    
     /**
      * prepareDirs: Prepare directory structure
      * @param eventName

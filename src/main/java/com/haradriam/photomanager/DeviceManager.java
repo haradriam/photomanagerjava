@@ -26,7 +26,7 @@ public class DeviceManager {
     public String[] getAvailableDevices() throws Exception {
         Properties prop = new Properties(); //Declare properties variable
         File deviceFile = new File(Constants.DEVICES_FILE); //Define the file that contains available devices
-
+        
         try {
             InputStream is = new FileInputStream(deviceFile); //Get InputStream from the configuration file
             prop.load(is); //Load the InputStream of the configuration file
