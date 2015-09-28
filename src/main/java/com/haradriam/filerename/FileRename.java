@@ -14,7 +14,6 @@ import org.apache.commons.io.FilenameUtils;
  * @author adrian
  */
 public class FileRename {
-
     static FileMetadata fm; //FileMetadata instance
     
     /**
@@ -50,7 +49,7 @@ public class FileRename {
             }
 
             String ext; //File extension
-            if((ext = FilenameUtils.getExtension(filePath)) != "") { //Check whether the file has extensión
+            if(!"".equals(ext = FilenameUtils.getExtension(filePath))) { //Check whether the file has extensión
                 finalName = finalName + "." + ext; //Add extension to the final name
             }
 
@@ -70,7 +69,7 @@ public class FileRename {
     public boolean renameFile(String filePath, String finalName, String finalFilePath) {
         File originalFile = new File(filePath); //Original file path
         File renamedFile = new File(FilenameUtils.normalize(finalFilePath + "/" + finalName)); //Renamed file
-
-        if(originalFile.renameTo(renamedFile)){ return true; } else { return false; } //Rename file
+        
+        return originalFile.renameTo(renamedFile); //Rename file
     }
 }
