@@ -212,7 +212,7 @@ public class GUIConfigureDevices extends javax.swing.JFrame {
         DefaultListModel listModel;
         DeviceManager dm = new DeviceManager();
         String[] deviceName;
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         
         listModel = (DefaultListModel) lstDevices.getModel();
         

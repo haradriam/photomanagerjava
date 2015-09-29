@@ -10,6 +10,7 @@ package com.haradriam.photomanager;
  * @author adrian
  */
 public class Constants {
+    public final static int MAX_PHOTO_SOURCES = 8;
     public final static int MAX_DEVICES = 8;
     public final static String DEVICES_FILE = "devices.conf";
 }
